@@ -64,7 +64,7 @@ Installation of [Docker][1] on Ubuntu with kernel 3.8 or newer:
     ENV REFRESHED_AT 2013-12-12
 
     RUN    echo "deb-src http://archive.ubuntu.com/ubuntu precise main" >> /etc/apt/sources.list
-    RUN    sed -i /etc/apt/sources.list 's/main$/main universe/'
+    RUN    sed -i 's/main$/main universe/' /etc/apt/sources.list
     RUN    apt-get update
     RUN    apt-get -y upgrade
     RUN    apt-get -y install wget vim git libpq-dev
